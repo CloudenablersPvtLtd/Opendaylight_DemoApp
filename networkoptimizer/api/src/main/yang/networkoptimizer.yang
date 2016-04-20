@@ -1,0 +1,26 @@
+module networkoptimizer {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:networkoptimizer";
+    prefix "networkoptimizer";
+
+    revision "2015-01-05" {
+        description "Initial revision of networkoptimizer model";
+    }
+
+    rpc service-account{
+        input {
+              leaf name {
+                      type string;
+              }
+              leaf description {
+                      type string;
+              }
+        }
+
+        output {
+               leaf service_name {
+                       type string;
+               }                 
+        }
+    }
+}
