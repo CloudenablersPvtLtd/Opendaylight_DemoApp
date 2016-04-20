@@ -8,22 +8,24 @@ Prerequisites:
  * Java 7 or above
 
 Configure Maven:
-cp -n ~/.m2/settings.xml{,.orig} ; \wget -q -O - https://raw.githubusercontent.com/opendaylight/odlparent/stable/beryllium/ settings.xml > ~/.m2/settings.xml
+
+ * cp -n ~/.m2/settings.xml{,.orig} ; \wget -q -O - https://raw.githubusercontent.com/opendaylight/odlparent/stable/beryllium/ settings.xml > ~/.m2/settings.xml
 
 Build the project & start karaf container:
 
-cd networkoptimizer
-mvn clean install
-karaf/target/assembly/bin/karaf
+ * cd networkoptimizer
+ * mvn clean install
+ * karaf/target/assembly/bin/karaf
 
 Verify the networkoptimizer RPC in Opendaylight API Doc Explorer UI:
 
-Access this URL to get Opendaylight API Doc Explorer with default credentials (admin/admin)
+ * Access this URL to get Opendaylight API Doc Explorer with default credentials (admin/admin)
 	http://127.0.0.1:8181/apidoc/explorer/index.html
 
-Select networkoptimizer module and provide below request structure to test the RPC.
+ * Select networkoptimizer module and provide below request structure to test the RPC.
 
 POST /operations/networkoptimizer:service-account
+
 Request:
 {
   "input":{
@@ -31,6 +33,7 @@ Request:
   "description": "Simple ODL App"
   }
 }
+
 
 Response:
 {
